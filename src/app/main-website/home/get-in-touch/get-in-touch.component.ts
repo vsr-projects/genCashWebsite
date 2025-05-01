@@ -44,7 +44,7 @@ export class GetInTouchComponent {
       mobile: ['', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]],
       query: ['', [Validators.required, Validators.minLength(10)]],
     });
-    
+
   }
 
   onSubmit(): void {

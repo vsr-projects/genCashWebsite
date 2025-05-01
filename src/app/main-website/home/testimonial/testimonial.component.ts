@@ -1,24 +1,15 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-@Component({
-  selector: 'app-testimonial',
-  imports: [CommonModule],
-  templateUrl: './testimonial.component.html',
-  styleUrl: './testimonial.component.scss'
-})
-export class TestimonialComponent {
-  testimonials = [
-    {
-      text: `At GenCash, we redefine the way India transacts, providing comprehensive financial services for the inclusive and sustainable growth of individuals, SMEs, and enterprises nationwide.`,
-      author: 'Shubham Gupta',
-      role: 'Founder'
-    },
-    // {
-    //   text: `At GenCash, we redefine the way India transacts, providing comprehensive financial services for the inclusive and sustainable growth of individuals, SMEs, and enterprises nationwide.`,
-    //   author: 'Shubham Gupta',
-    //   role: 'Founder'
-    // }
-  ];
-  
+gsap.registerPlugin(ScrollTrigger);
+
+@Component({ selector: 'app-testimonials', templateUrl: './testimonials.component.html', styleUrls: ['./testimonials.component.scss'] })
+export class TestimonialsComponent implements AfterViewInit {
+  constructor(private el: ElementRef) {}
+  ngAfterViewInit() {
+    gsap.utils.toArray('.testimonial, .client-logos img').forEach((el: any) => {
+      gsap.from(el, { scrollTrigger: { trigger: el, start: 'top 90%' }, opacity: 0, y: 30, duration: 1, stagger: 0.2 });
+    });
+  }
 }

@@ -1,20 +1,12 @@
-<div class="container my-5">
-    <h2 class="title">Testimonials</h2>
-
-    <div class="row mt-4">
-        <div class="col-md-12 mb-4" *ngFor="let testimonial of testimonials">
-            <div class="testimonial-box position-relative">
-                <div class="quote-icon">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="#00A9E0" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22 0L8 18H18V48H0V18L18 0H22Z" fill="#00A9E0" style="margin: 0px -20px 0px 0px;" />
-                    </svg>
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="#00A9E0" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22 0L8 18H18V48H0V18L18 0H22Z" fill="#00A9E0" style="margin: 0px -20px 0px 0px;"/>
-                    </svg>
-                </div>
-                <p class="mb-2">{{ testimonial.text }}</p>
-                <p class="fw-bold">{{ testimonial.author }}, {{ testimonial.role }}</p>
-            </div>
-        </div>
-    </div>
-</div>
+<section id="testimonials" class="panel" style="background: var(--bg-light);">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial">
+    <p>“GC transformed how we engage with our citizens—our participation rates doubled!”</p>
+    <span>— City Manager, Springfield</span>
+  </div>
+  <div class="client-logos">
+    <img src="assets/logo1.png" alt="Client 1">
+    <img src="assets/logo2.png" alt="Client 2">
+    <img src="assets/logo3.png" alt="Client 3">
+  </div>
+</section>

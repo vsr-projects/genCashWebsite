@@ -1,36 +1,19 @@
-import { Component } from '@angular/core';
-import { OurServicesComponent } from "./our-services/our-services.component";
+import { Component, AfterViewInit, ElementRef } from '@angular/core';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+gsap.registerPlugin(ScrollTrigger);
 
-import { CommonModule } from '@angular/common';
-import { NzDividerModule } from 'ng-zorro-antd/divider';
-import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzCardModule } from 'ng-zorro-antd/card';
-import { MainHomeBgComponent } from "./main-home-bg/main-home-bg.component";
-import { UpiSwitchComponent } from "./upi-switch/upi-switch.component";
-import { SolutionsComponent } from "./solutions/solutions.component";
-import { KeyServicesComponent } from "./key-services/key-services.component";
-import { TestimonialComponent } from "./testimonial/testimonial.component";
-import { StatisticComponent } from "./statistic/statistic.component";
-import { OurClientleComponent } from "./our-clientle/our-clientle.component";
-import { GetInTouchComponent } from "./get-in-touch/get-in-touch.component";
-
-@Component({
-  selector: 'app-home',
-  imports: [
-    CommonModule, NzDividerModule, NzIconModule, NzCardModule, NzIconModule,
-    MainHomeBgComponent, KeyServicesComponent,
-    OurServicesComponent,
-    UpiSwitchComponent,
-    SolutionsComponent,
-    TestimonialComponent,
-    StatisticComponent,
-    OurClientleComponent,
-    GetInTouchComponent
-],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
-})
-export class HomeComponent {
-
+@Component({ selector: 'app-home', templateUrl: './home.component.html', styleUrls: ['./home.component.scss'] })
+export class HomeComponent implements AfterViewInit {
+  constructor(private el: ElementRef) {}
+  ngAfterViewInit() {
+    // Hero animation
+    gsap.from(this.el.nativeElement.querySelectorAll('h1, .subtitle, .cta'), {
+      scrollTrigger: { trigger: this.el.nativeElement, start: 'top 80%' }, opacity: 0, y: 30, stagger: 0.2, duration: 1
+    });
+    // About animation
+    gsap.from('.about-content .text', { scrollTrigger: { trigger: '.about-section', start: 'top 80%' }, opacity: 0, x: -50, duration: 1 });
+    gsap.from('.about-content .image', { scrollTrigger: { trigger: '.about-section', start: 'top 80%' }, opacity: 0, x: 50, duration: 1 });
+  }
 }

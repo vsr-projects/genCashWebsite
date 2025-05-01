@@ -1,0 +1,8 @@
+#insights {
+  h2 { font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary-blue); }
+  .metrics { display: flex; gap: 3rem; }
+  .metric { text-align: center;
+    .number { font-size: 2rem; display: block; color: var(--primary-blue); }
+    .label { font-size: 1rem; }
+  }
+}
