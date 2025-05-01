@@ -4,6 +4,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+document.querySelectorAll('.number').forEach(el => {
+  gsap.fromTo(el, { innerText: 0 }, {
+    innerText: +el.textContent,
+    duration: 2,
+    ease: 'none',
+    scrollTrigger: { trigger: el, start: 'top 80%' },
+    snap: { innerText: 1 },
+    onUpdate: () => el.textContent = Math.ceil(el.innerText)
+  });
+});
+fadeIn('#statistic .metric', { scrollTrigger: { trigger: '#statistic', start: 'top 80%' } });
+
+
 @Component({ selector: 'app-insights', templateUrl: './insights.component.html', styleUrls: ['./insights.component.scss'] })
 export class InsightsComponent implements AfterViewInit {
   constructor(private el: ElementRef) {}
@@ -17,3 +30,5 @@ export class InsightsComponent implements AfterViewInit {
     });
   }
 }
+
+

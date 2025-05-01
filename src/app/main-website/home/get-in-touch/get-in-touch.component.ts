@@ -64,3 +64,13 @@ export class GetInTouchComponent {
     }
   }
 }
+
+fadeIn('#get-in-touch input, #get-in-touch textarea, #get-in-touch .cta', {
+  scrollTrigger: { trigger: '#get-in-touch', start: 'top 80%' }, stagger: 0.15
+});
+document.querySelector('#get-in-touch .cta').addEventListener('click', () => {
+  const ripple = document.createElement('span');
+  ripple.className = 'ripple'; // style absolute circle via CSS
+  event.currentTarget.append(ripple);
+  gsap.to(ripple, { scale: 5, opacity: 0, duration: 0.6, onComplete: () => ripple.remove() });
+});

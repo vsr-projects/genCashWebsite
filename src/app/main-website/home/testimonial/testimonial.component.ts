@@ -13,3 +13,8 @@ export class TestimonialsComponent implements AfterViewInit {
     });
   }
 }
+
+fadeIn('#testimonial .testimonial', { scrollTrigger: { trigger: '#testimonial', start: 'top 80%' } });
+gsap.from('#testimonial .client-logos img', {
+  x: -50, opacity: 0, stagger: 0.2, scrollTrigger: { trigger: '#testimonial', start: 'top 80%' }
+});

@@ -9,3 +9,7 @@ import { Component } from '@angular/core';
 export class OurClientleComponent {
 
 }
+gsap.to('#our-clientle .logos', {
+  xPercent: -100, ease: 'none',
+  scrollTrigger: { trigger: '#our-clientle', start: 'top top', end: 'bottom top', scrub: true, pin: true }
+});

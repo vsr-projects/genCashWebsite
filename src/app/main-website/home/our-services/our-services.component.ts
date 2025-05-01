@@ -45,5 +45,12 @@ export class OurServicesComponent {
   //     img: 'assets/merchant_acquisition.png'
   //   }
   // ];
-  
+
 }
+fadeIn('#key-services .card', {
+  scrollTrigger: { trigger: '#key-services', start: 'top 90%', stagger: 0.15 }
+});
+document.querySelectorAll('#key-services .card').forEach(card => {
+  card.addEventListener('mouseenter', () => gsap.to(card, { scale: 1.05, boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }));
+  card.addEventListener('mouseleave', () => gsap.to(card, { scale: 1, boxShadow: '0 4px 15px rgba(0,0,0,0.05)' }));
+});
