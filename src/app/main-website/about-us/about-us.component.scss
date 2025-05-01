@@ -1,0 +1,14 @@
+.responsive-img-container {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.responsive-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}

@@ -1,0 +1,64 @@
+// .gen-footer {
+//     background-color: #ffffff;
+//   }
+
+//   .footer-logo {
+//     font-weight: 700;
+//     font-size: 32px;
+//   }
+
+//   ul li {
+//     margin-bottom: 8px;
+//     color: #000;
+//     cursor: pointer;
+//     font-weight: 600;
+//   }
+
+//   ul li:hover {
+//     text-decoration: underline;
+//   }
+.gen-footer {
+    background-color: #ffffff;
+}
+
+.footer-logo {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.footer-list li {
+    margin-left: 30px;
+    margin-bottom: 8px;
+    color: #000;
+    cursor: pointer;
+}
+
+.footer-list li:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    // background: linear-gradient(90deg, #003a5d 0%, #004e7c 100%);
+    background: linear-gradient(to bottom, #002f4b, #2e7bb4);
+    font-size: 14px;
+}
+
+
+.genchas_logo {
+    max-width: 200px;
+}
+
+@media (min-width: 768px) and (max-width :950px) {
+    .genchas_logo{
+        max-width: 150px;
+    }
+}
+
+.text-info{
+    margin-left: 30px;
+}
+
+.imgs{
+    max-width: 20px;
+    max-height: 20px;
+}

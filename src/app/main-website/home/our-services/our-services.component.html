@@ -1,0 +1,93 @@
+<div class="our-services-section py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="main-title mb-5">Our Services</h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4 mb-4" *ngFor="let card of cards">
+        <div class="custom-card text-center position-relative rounded shadow"
+          style="background-color: #111; border: 1px solid #007bff; border-radius: 20px !important;">
+          <div
+            class="card-header bg-primary text-white font-weight-bold rounded-pill px-3 py-1 d-inline-block position-absolute top-0 start-50 translate-middle-x"
+            style="transform: translate(-50%, -50%) !important; z-index: 2;">
+            {{ card.title }}
+          </div>
+          <div class="card-body ">
+            <div class="card-background">
+              <img [src]="card.img" [alt]="card.title" class="img-fluid" style="max-height: 200px;" />
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container py-4 mb-5">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="title-2">
+        <span style="color: #00A0E3;">
+          Service Benefits&nbsp;
+        </span>
+        - Comprehensive Suite of Services
+      </h1>
+    </div>
+  </div>
+  <div class="row justify-content-center py-2">
+    <div class="container ">
+      <div class="row justify-content-center">
+        <div class="col-md-4 col-lg-4 position-relative mt-2">
+          <div class="icon-absolute">
+            <div class="icon-circle d-flex align-items-center justify-content-center">
+              <img src="assets/benefits/increasedefficiency.svg" alt="Efficiency Icon"
+                class="icon-img" />
+            </div>
+          </div>
+          <div class="info-card ps-5">
+            <h5 class="card-title2 mb-1">Increased Efficiency</h5>
+            <p class="card-text mb-0">
+              Enhance efficiency with FiatPe. Simplify your work flow with our streamlined solutions
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 position-relative mt-2">
+          <div class="icon-absolute">
+            <div class="icon-circle d-flex align-items-center justify-content-center">
+              <img src="assets/benefits/reducemanualwork.svg" alt="Efficiency Icon"
+                class="icon-img" />
+            </div>
+          </div>
+          <div class="info-card ps-5">
+            <h5 class="card-title2 mb-1">Reduced Manual Work</h5>
+            <p class="card-text mb-0">
+              Cut down on manual work with FiatPe's automated solutions. Streamline your operations effortlessly
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 position-relative mt-2">
+          <div class="icon-absolute">
+            <div class="icon-circle d-flex align-items-center justify-content-center">
+              <img src="assets/benefits/improvecashflowmanagement.svg" alt="Efficiency Icon"
+                class="icon-img" />
+            </div>
+          </div>
+          <div class="info-card ps-5">
+            <h5 class="card-title3 mb-1">Improved Cash Flow Management</h5>
+            <p class="card-text mb-0">
+              Optimize cash flow management with FiatPe. Empowering businesses with smarter financial solutions
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

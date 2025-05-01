@@ -1,0 +1,81 @@
+.hero-section {
+    position: relative;
+    background-image: url('/assets/GC_Website_New_Apr_25.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 110vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(0.5px);
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    top: 45px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.main-heading {
+    font-size: 4.8rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+
+.sub-text {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.hero-video video {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-bottom: 2rem;
+    }
+
+    .main-heading {
+        font-size: 3.2rem;
+    }
+
+    .sub-text {
+        font-size: 1.2rem;
+    }
+
+    .hero-video video {
+        max-width: 300px;
+    }
+}
